@@ -1,0 +1,105 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 3
+  other_domain: 3
+  platform: 1
+  roles:
+  - api
+  - docs
+  - marketing
+  - source
+  - website
+hosts:
+- host: anythingllm.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: anythingllm.com
+  role: marketing
+  relation: other-domain
+- host: api.anythingllm.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: anythingllm.com
+  role: api
+  relation: other-domain
+- host: api.useanything.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: useanything.com
+  role: api
+  relation: own
+- host: docs.anythingllm.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types:
+  - ChangeLog
+  - GettingStarted
+  serves:
+  - docs
+  registrable_domain: anythingllm.com
+  role: docs
+  relation: other-domain
+- host: docs.useanything.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Documentation
+  serves:
+  - docs
+  - hosting
+  vendor: vercel
+  registrable_domain: useanything.com
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: useanything.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: useanything.com
+  role: website
+  relation: own

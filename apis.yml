@@ -1,23 +1,84 @@
 aid: useanything
+
 name: Useanything
-description: 'Useanything is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://anythingllm.com/share-card.png
+
+description: 'Useanything is a placeholder company currently lacking publicly available documentation or a dedicated website. It appears in the API Evangelist harvest backlog without verifiable online presence, and no concrete API specifications or developer resources have been identified.'
+
 url: https://raw.githubusercontent.com/api-evangelist/useanything/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Placeholder
+- API-Evangelist
+- Stub
+- Unknown
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Vendors
+  url: vendors/useanything-vendors.yml
+- type: Spectral
+  url: rules/useanything-rules.yml
+- type: Vocabulary
+  url: vocabulary/useanything-vocabulary.yml
+- type: ChangeLog
+  url: changelog/useanything-changelog.yml
+- type: Conformance
+  url: conformance/useanything-conformance.yml
+- type: Hosts
+  url: hosts/useanything-hosts.yml
+- type: TermsOfService
+  url: https://docs.useanything.com/mobile/terms
+- type: PrivacyPolicy
+  url: https://docs.useanything.com/mobile/privacy
+- type: GitHubOrganization
+  url: https://github.com/Mintplex-Labs
+- type: ChangeLog
+  url: https://docs.anythingllm.com/changelog/overview
+- type: Blog
+  url: https://anythingllm.com/blog
+- type: GettingStarted
+  url: https://docs.anythingllm.com/setup/embedder-configuration/overview
+- type: Documentation
+  url: https://docs.useanything.com/
 - type: Website
   url: https://useanything.com/
+- type: DomainSecurity
+  url: security/useanything-domain-security.yml
+
+apis:
+- aid: useanything:useanything-api
+  name: Useanything API
+  description: 'Useanything API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-21);
+    not the provider''s own document.'
+  humanURL: https://docs.anythingllm.com/features/text-to-speech
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/useanything-openapi-generated.yml
+    x-provenance: generated
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 13
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

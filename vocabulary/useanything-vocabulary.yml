@@ -1,0 +1,21 @@
+generated: '2026-10-21'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/useanything-openapi-generated.yml
+vocabulary:
+  name: Useanything Domain Vocabulary
+  description: 'Terms declared by Useanything''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-21'
+  terms:
+  - term: Api
+    definition: 'Resource group in the contract; its operation GET /api/v1/health: GET /api/v1/health'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/useanything-openapi-generated.yml
+  - term: Audio
+    definition: 'Resource group in the contract; its operation POST /v1/audio/speech: Calls any service that implements the OpenAI speech API
+      (POST /v1/audio/speech) using the configured Base URL, API Key, TTS Model, and Voice Model.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/useanything-openapi-generated.yml

@@ -1,0 +1,80 @@
+openapi: 3.1.0
+info:
+  title: Useanything API
+  version: '2026-10-21'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-21: 2 operation(s) read from 4 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Useanything has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 1
+    pages-with-code: 2
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-21'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.anythingllm.com/features/text-to-speech
+  - https://docs.useanything.com/features/text-to-speech
+  - https://docs.anythingllm.com/installation-docker/built-in-llm
+  - https://docs.useanything.com/installation-docker/built-in-llm
+paths:
+  /api/v1/health:
+    get:
+      operationId: get_api_v1_health
+      tags:
+      - Api
+      summary: GET /api/v1/health
+      x-source: https://docs.anythingllm.com/installation-docker/built-in-llm
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: javascript
+        snippet: fetch("http://127.0.0.1:13355/api/v1/health")
+  /v1/audio/speech:
+    post:
+      operationId: post_v1_audio_speech
+      tags:
+      - Audio
+      summary: Any OpenAI Compatible TTS Service
+      description: Calls any service that implements the OpenAI speech API (POST /v1/audio/speech) using the configured Base URL, API Key, TTS
+        Model, and Voice Model.
+      x-source: https://docs.anythingllm.com/features/text-to-speech
+      parameters:
+      - name: Base URL
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The root of the service, including the version path, e.g., https://api.openai.com/v1
+      - name: API Key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Optional API key if the service requires authentication
+      - name: TTS Model
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The model parameter sent with each request
+      - name: Voice Model
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The voice identifier sent with each request
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+tags:
+- name: Api
+- name: Audio

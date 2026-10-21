@@ -1,0 +1,34 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.anythingllm.com/changelog/overview
+sources:
+- https://docs.anythingllm.com/changelog/overview
+- https://docs.anythingllm.com/changelog/v1.18.0
+- https://docs.anythingllm.com/changelog/v1.17.0
+- https://docs.anythingllm.com/changelog/v1.16.2
+entries:
+- breaking: false
+  highlights:
+  - 'New Built-in Engine: Lemond'
+  - AnythingLLM Desktop has a new built-in engine for running models on your computer.
+  - We are moving off of Ollama and onto Lemond, the embedded version of Lemonade.
+  - The new engine is smaller, faster, supports more hardware, and can run more models.
+  version: v1.18.0
+- breaking: false
+  highlights:
+  - Reasoning effort controls - pick how hard the model thinks per chat for Anthropic, OpenAI, Gemini, DeepSeek, Ollama, and GenieX Engine models
+  - Pull a model from Hugging Face straight into AnythingLLM with a deep link
+  - Tinyscribe 0.1.0 with new speaker UI controls and improved performance
+  - Personalized greetings on the home screen and empty chats that change with the time of day
+  version: v1.17.0
+- breaking: false
+  highlights:
+  - LLMman - OSS is now available as a local LLM provider, replacing Docker Model Runner
+  - Google Vertex AI is now available as an LLM provider
+  - New generate-image agent skill for creating images from chat
+  - You.com is now the default web search provider for richer web-searches with Zero Data Retention
+  version: v1.16.2
+current_version: v1.18.0
+note: Versioning scheme follows semantic versioning (vMajor.minor.patch).
+docs: https://docs.anythingllm.com/changelog/overview
